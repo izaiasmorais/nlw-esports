@@ -5,7 +5,6 @@ import { Check, GameController } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import { Input } from "../components/form/Input";
 import { Game } from "../App";
-import axios from "axios";
 import { api } from "../api/axios";
 import toast from "react-hot-toast";
 
