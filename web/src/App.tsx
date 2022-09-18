@@ -5,7 +5,7 @@ import { AdBanner } from "./components/Banner";
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CreateAdModal } from "./components/CreateAdModal";
-import { api } from "./api/axios";
+import { api } from "./lib/axios";
 
 export interface Game {
   id: string;

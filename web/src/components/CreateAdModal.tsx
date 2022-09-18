@@ -5,7 +5,7 @@ import { Check, GameController } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import { Input } from "../components/form/Input";
 import { Game } from "../App";
-import { api } from "../api/axios";
+import { api } from "../lib/axios";
 import toast from "react-hot-toast";
 
 interface Props {
