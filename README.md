@@ -40,9 +40,12 @@ $ git clone https://github.com/IzaiasMorais/nlwesports.git && cd nlwesports
 
 ```bash
 # Instalando dependências
-$ npm i
+$ yarn
+
+# Variáveis ambiente
+// No backend, defina em .env, a url onde irá rodar seu servidor
 
 # Rodando o projeto
-$ npm run dev
+$ yarn dev
 
 ```
