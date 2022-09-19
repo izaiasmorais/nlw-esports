@@ -3,30 +3,37 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { GameParams } from "../../@types/navigation";
-import { Background } from "../Background";
+import { Background } from "../../components/Background";
 import { Entypo } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { THEME } from "../../theme";
-import { Header } from "../Header";
-import { AdCard, AdCardProps } from "../AdCard";
+import { Header } from "../../components/Header";
+import { AdCard, AdCardProps } from "../../components/AdCard";
 import { useEffect, useState } from "react";
+import { ModalMatch } from "../../components/Modal";
+import { api } from "../../lib/axios";
 
 export function Game() {
   const route = useRoute();
   const navigate = useNavigation();
   const game = route.params as GameParams;
   const [adInfo, setadInfo] = useState<AdCardProps[]>([]);
+  const [discordSelected, setDiscordSelected] = useState("");
 
   function handleGoBack() {
     navigate.goBack();
   }
 
+  async function handleShowDiscord(id: string) {
+    await api
+      .get(`/ads/${id}/discord`)
+      .then((r) => setDiscordSelected(r.data.discord));
+  }
+
   useEffect(() => {
-    fetch(`http://192.168.100.2:3333/games/${game.id}/ads`)
-      .then((response) => response.json())
-      .then((data) => {
-        setadInfo(data);
-      });
+    api.get(`/games/${game.id}/ads`).then((response) => {
+      setadInfo(response.data);
+    });
   }, []);
 
   return (
@@ -53,7 +60,9 @@ export function Game() {
         <FlatList
           data={adInfo}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <AdCard data={item} onConnect={() => {}} />}
+          renderItem={({ item }) => (
+            <AdCard data={item} onConnect={() => handleShowDiscord(item.id)} />
+          )}
           showsHorizontalScrollIndicator={false}
           horizontal
           style={styles.containerList}
@@ -64,6 +73,12 @@ export function Game() {
           ListEmptyComponent={() => (
             <Text style={styles.empty}>Não há anúncios publicados ainda.</Text>
           )}
+        />
+
+        <ModalMatch
+          visible={discordSelected.length > 0}
+          onClose={() => setDiscordSelected("")}
+          discord={discordSelected}
         />
       </SafeAreaView>
     </Background>

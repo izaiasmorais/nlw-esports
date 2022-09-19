@@ -7,15 +7,14 @@ import { GameCard, GameCardProps } from "../../components/GameCard";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Background } from "../../components/Background";
 import { useNavigation } from "@react-navigation/native";
+import { api } from "../../lib/axios";
 
 export function Home() {
   const [games, setGames] = useState<GameCardProps[]>([]);
   const navigation = useNavigation();
 
   useEffect(() => {
-    fetch("http://192.168.100.2:3333/games")
-      .then((response) => response.json())
-      .then((data) => setGames(data));
+    api.get("/games").then((r) => setGames(r.data));
   }, []);
 
   function handleOpenGamePage({ id, title, bannerUrl }: GameCardProps) {

@@ -36,7 +36,7 @@ export function AdCard({ data, onConnect }: Props) {
         }
       />
       <TouchableOpacity style={styles.button} onPress={onConnect}>
-        <GameController size={20} color={THEME.COLORS.TEXT} />
+        <GameController size={20} color="#ffffff" />
         <Text style={styles.buttonTitle}>Conectar</Text>
       </TouchableOpacity>
     </View>
