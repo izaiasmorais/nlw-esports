@@ -44,7 +44,7 @@ $ git clone https://github.com/IzaiasMorais/nlwesports.git && cd nlwesports
 $ yarn
 
 # Variáveis ambiente
-// No frontend, defina em .env, a url onde irá rodar seu servidor
+// no frontend, defina em .env, um valor para VITE_AXIOS_BASE_URL, que é a url onde irá rodar seu servidor
 
 # Rodando o projeto
 $ yarn dev
