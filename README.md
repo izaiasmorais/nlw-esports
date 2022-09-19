@@ -44,7 +44,7 @@ $ git clone https://github.com/IzaiasMorais/nlwesports.git && cd nlwesports
 $ yarn
 
 # Variáveis ambiente
-// No backend, defina em .env, a url onde irá rodar seu servidor
+// No frontend, defina em .env, a url onde irá rodar seu servidor
 
 # Rodando o projeto
 $ yarn dev
