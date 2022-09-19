@@ -22,6 +22,7 @@ Aplicação focada em unir jogadores de diversos jogos. Você pode usá-lo para 
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
 
 ### Backend
 - [Node.js](https://nodejs.org/en/)
