@@ -18,17 +18,17 @@ Aplicação focada em unir jogadores de diversos jogos. Você pode usá-lo para 
 
 ## 🚀 Tecnologias
 
-### ➜ Frontend
+### Frontend
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 
-### ➜ Backend
+### Backend
 - [Node.js](https://nodejs.org/en/)
 - [Prisma](https://www.prisma.io/)
 - [SQLite](https://www.sqlite.org/index.html)
 
-### ➜ Mobile
+### Mobile
 - [ReactNative](https://nodejs.org/en/)
 - [Expo](https://nodejs.org/en/)
 
