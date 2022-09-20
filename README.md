@@ -36,7 +36,7 @@ Aplicação focada em unir jogadores de diversos jogos. Você pode usá-lo para 
 ## 💻 Clonando projeto
 
 ```bash
-$ git clone https://github.com/IzaiasMorais/nlwesports.git && cd nlwesports
+$ git clone https://github.com/izaiasmorais/nlwesports.git && cd nlwesports
 ```
 
 ```bash
