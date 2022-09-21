@@ -28,6 +28,7 @@ Aplicação focada em unir jogadores de diversos jogos. Você pode usá-lo para 
 - [Node.js](https://nodejs.org/en/)
 - [Prisma](https://www.prisma.io/)
 - [SQLite](https://www.sqlite.org/index.html)
+- [Railway](https://railway.app/)
 
 ### Mobile
 - [ReactNative](https://nodejs.org/en/)
